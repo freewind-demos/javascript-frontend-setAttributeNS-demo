@@ -1,10 +1,17 @@
-const svg = document.getElementById('test'), use = svg.lastElementChild;
+const main = document.getElementById('main');
 
-console.log(use.getAttributeNS(null, 'x'));
-// "200"
+const xlinkTitle = main.getAttributeNS('http://www.w3.org/1999/xlink', 'title');
+console.log('### xlinkTitle', xlinkTitle);
 
-console.log(use.getAttributeNS('http://www.w3.org/1999/xlink', 'href'));
-// "#shape"
+const xlinkAaa = main.getAttributeNS('http://www.w3.org/1999/xlink', 'aaa');
+console.log('### xlinkAaa', xlinkAaa);
 
-console.log(use.getAttributeNS('http://foo.io/bar', 'foo'));
-// "null", why?
+const xlinkAaa2 = main.getAttribute('xlink:aaa');
+console.log('### xlinkAaa2', xlinkAaa2);
+
+main.setAttributeNS('http://www.w3.org/1999/xlink', 'ccc', '333');
+const xlinkCcc = main.getAttributeNS('http://www.w3.org/1999/xlink', 'ccc');
+console.log('### xlinkCcc', xlinkCcc);
+
+// show custom svg
+main.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'sample.svg#Layer_1');

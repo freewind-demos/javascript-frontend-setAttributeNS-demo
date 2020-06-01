@@ -1,5 +1,8 @@
 {
   "scripts": {
-    "demo": "open index.html"
+    "demo": "http-server . -c-0 -o "
+  },
+  "devDependencies": {
+    "http-server": "0.12.3"
   }
 }
