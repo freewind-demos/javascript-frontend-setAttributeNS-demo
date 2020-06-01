@@ -1,6 +1,6 @@
-Js Hello World Demo
-===================
+JavaScript Frontend setNamespaceNS Demo
+=======================================
 
-Open `index.html` in your browser.
-
-You will see "Hello, JS!" on the page.
+```
+open index.html
+```
